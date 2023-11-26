@@ -2,7 +2,7 @@
   "name": "HealthCare",
   "version": "1.0.0",
   "description": "A website which connects doctors, patients and services like book Appoinment",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
