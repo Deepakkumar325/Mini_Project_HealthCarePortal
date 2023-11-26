@@ -72,6 +72,7 @@ passport.deserializeUser((id, done) => {
   });
 });
 
+// routes
 app.use(IndexRoutes);
 app.use(PatientRoutes);
 app.use(DoctorRoutes);

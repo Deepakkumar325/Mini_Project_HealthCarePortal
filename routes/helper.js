@@ -1,9 +1,9 @@
 exports.ConvertChosenTime = (str) => {
-  const date0 = new Date(str);
-  date0.setHours(date0.getHours() + 5.5);
-  date0.setMinutes(date0.getMinutes() + 30);
-  let hour = date0.getHours();
-  const minutes = date0.getMinutes();
+  const date = new Date(str);
+  date.setHours(date.getHours() + 5.5);
+  date.setMinutes(date.getMinutes() + 30);
+  let hour = date.getHours();
+  const minutes = date.getMinutes();
   let end = 'AM';
   if (hour >= 12) {
     hour -= 12;
@@ -13,13 +13,15 @@ exports.ConvertChosenTime = (str) => {
   return `${JoinedTime} ${end}`;
 };
 
+
+
 exports.convert = (str) => {
-  const date0 = new Date(str);
-  date0.setHours(date0.getHours() + 5);
-  date0.setMinutes(date0.getMinutes() + 30);
-  const mnth = `0${date0.getMonth() + 1}`.slice(-2);
-  const day = `0${date0.getDate()}`.slice(-2);
-  return [day, mnth, date0.getFullYear()].join('-');
+  const date = new Date(str);
+  date.setHours(date.getHours() + 5);
+  date.setMinutes(date.getMinutes() + 30);
+  const mnth = `0${date.getMonth() + 1}`.slice(-2);
+  const day = `0${date.getDate()}`.slice(-2);
+  return [day, mnth, date.getFullYear()].join('-');
 };
 
 exports.isLoggedIn = (req, res, next) => {

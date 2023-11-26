@@ -131,6 +131,7 @@ router.get(
   }
 );
 
+
 router.get(
   '/patienthome/bookappointment/:patientid/:disease/:doctorid',
   isAuthorizedPatient,
@@ -273,7 +274,6 @@ router.post('/patientregistration', (req, res) => {
       console.log(err);
       const data = {};
       data.user = req.user;
-      alert("Login SuccesFully...")
       res.render('patientregistration', { data });
     }
     console.log(item);
